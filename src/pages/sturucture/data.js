@@ -1,0 +1,188 @@
+import LocalStore from "devextreme/data/local_store";
+export const employees = [
+  {
+    ID: 1,
+    Parent_ID: 0,
+    Name: "John Heart",
+    Status: false,
+  },
+  {
+    ID: 2,
+    Parent_ID: 1,
+    Name: "Samantha Bright",
+    Status: false,
+  },
+  {
+    ID: 3,
+    Parent_ID: 1,
+    Name: "Arthur Miller",
+    Status: false,
+  },
+  {
+    ID: 4,
+    Parent_ID: 1,
+    Name: "Robert Reagan",
+    Status: false,
+  },
+  {
+    ID: 5,
+    Parent_ID: 1,
+    Name: "Greta Sims",
+    Status: false,
+  },
+  {
+    ID: 6,
+    Parent_ID: 3,
+    Name: "Brett Wade",
+    Status: false,
+  },
+  {
+    ID: 7,
+    Parent_ID: 5,
+    Name: "Sandra Johnson",
+    Status: false,
+  },
+  {
+    ID: 8,
+    Parent_ID: 4,
+    Name: "Ed Holmes",
+    Status: false,
+  },
+  {
+    ID: 9,
+    Parent_ID: 3,
+    Name: "Barb Banks",
+    Status: false,
+  },
+  {
+    ID: 10,
+    Parent_ID: 2,
+    Name: "Kevin Carter",
+    Status: false,
+  },
+  {
+    ID: 11,
+    Parent_ID: 5,
+    Name: "Cindy Stanwick",
+    Status: false,
+  },
+  {
+    ID: 12,
+    Parent_ID: 8,
+    Name: "Sammy Hill",
+    Status: false,
+  },
+  {
+    ID: 13,
+    Parent_ID: 10,
+    Name: "Davey Jones",
+    Status: false,
+  },
+  {
+    ID: 14,
+    Parent_ID: 10,
+    Name: "Victor Norris",
+    Status: false,
+  },
+  {
+    ID: 15,
+    Parent_ID: 10,
+    Name: "Mary Stern",
+    Status: false,
+  },
+  {
+    ID: 16,
+    Parent_ID: 10,
+    Name: "Robin Cosworth",
+  },
+  {
+    ID: 17,
+    Parent_ID: 9,
+    Name: "Kelly Rodriguez",
+    Status: false,
+  },
+  {
+    ID: 18,
+    Parent_ID: 9,
+    Name: "James Anderson",
+    Status: false,
+  },
+  {
+    ID: 19,
+    Parent_ID: 9,
+    Name: "Antony Remmen",
+    Status: false,
+  },
+  {
+    ID: 20,
+    Parent_ID: 8,
+    Name: "Olivia Peyton",
+    Status: false,
+  },
+  {
+    ID: 21,
+    Parent_ID: 6,
+    Name: "Taylor Riley",
+    Status: false,
+  },
+  {
+    ID: 22,
+    Parent_ID: 6,
+    Name: "Amelia Harper",
+    Status: false,
+  },
+  {
+    ID: 23,
+    Parent_ID: 6,
+    Name: "Wally Hobbs",
+    Status: false,
+  },
+  {
+    ID: 24,
+    Parent_ID: 6,
+    Name: "Brad Jameson",
+    Status: false,
+  },
+  {
+    ID: 25,
+    Parent_ID: 6,
+    Name: "Karen Goodson",
+    Status: false,
+  },
+  {
+    ID: 26,
+    Parent_ID: 5,
+    Name: "Marcus Orbison",
+    Status: false,
+  },
+  {
+    ID: 27,
+    Parent_ID: 5,
+    Name: "Sandy Bright",
+    Status: false,
+  },
+  {
+    ID: 28,
+    Parent_ID: 6,
+    Name: "Morgan Kennedy",
+    Status: false,
+  },
+  {
+    ID: 29,
+    Parent_ID: 28,
+    Name: "Violet Bailey",
+    Status: false,
+  },
+  {
+    ID: 30,
+    Parent_ID: 5,
+    Name: "Ken Samuelson",
+    Status: false,
+  },
+];
+
+const store = new LocalStore({
+  key: ["ID","Parent_ID"],
+  data: employees,
+  name: "myLocalData",
+});
