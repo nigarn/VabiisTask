@@ -8,9 +8,9 @@ import {
   Paging,
   Scrolling,
   Editing,
+  Lookup,
 } from "devextreme-react/tree-list";
 import { employees } from "./data";
-
 
 const sturucture = () => {
   return (
@@ -31,8 +31,11 @@ const sturucture = () => {
       <FilterRow visible={true} />
       <Scrolling mode="standard" />
       <Column dataField="Name" />
+      <Column dataField="Parent_ID">
+        <Lookup dataSource={employees} valueExpr="Parent_ID" displayExpr="ID" />
+      </Column>
       <Column dataField="Status"></Column>
-      <Paging enabled={true} defaultPageSize={10} />
+      <Paging enabled={true} defaultPageSize={5} />
     </TreeList>
   );
 };
