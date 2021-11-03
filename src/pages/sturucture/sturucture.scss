@@ -4,3 +4,24 @@
 .treelist-text{
     text-align: left;
 }
+@mixin button {
+    color: #b2b2b2;
+}
+.add-button{
+@include button();
+&:hover{
+    color:#2ecc71;
+}
+}
+.edit-button{
+    @include button();
+    &:hover{
+        color:#3498db;
+    }
+}
+.delete-button{
+    @include button();
+    &:hover{
+        color:#c0392b;
+    }
+}

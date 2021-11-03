@@ -10,15 +10,13 @@ import {
   Editing,
   Lookup,
   ValidationRule,
+  Button
 } from "devextreme-react/tree-list";
 
 import { employees } from "./data";
 import './sturucture.scss'
-const popupOptions = {
-  title: "Employee Info",
-  showTitle: true,
-  width: 700,
-};
+
+
 const expandedRowKeys = [1, 2, 3, 5];
 const sturucture = () => {
   return (
@@ -34,10 +32,9 @@ const sturucture = () => {
         allowUpdating={true}
         allowDeleting={true}
         allowAdding={true}
-        popup={popupOptions}
-        mode="popup"
+      
         selectTextOnEditStart={true}
-        useIcons={true}
+    
       />
       <HeaderFilter visible={true} />
       <HeaderFilter visible={true} />
@@ -53,7 +50,13 @@ const sturucture = () => {
         <Lookup dataSource={employees} valueExpr="Parent_ID" displayExpr="ID" />
       </Column>
       <Column dataField="Status"></Column>
+      <Column type="buttons">
+            <Button name="edit"  className={"edit-button"} />
+            <Button name="delete" className={"delete-button"}  />
+            <Button name="add" className={"add-button"} />
+          </Column>
       <Paging enabled={true} defaultPageSize={5} />
+      
     </TreeList>
   );
 };
